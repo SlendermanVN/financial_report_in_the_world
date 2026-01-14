@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+body {
+  background-color: $background-color;
+  color: $text-primary;
+  font-family: var(--font-geist-sans);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 48px 24px;
+  }
+}

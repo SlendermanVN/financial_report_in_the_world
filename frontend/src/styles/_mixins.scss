@@ -1,0 +1,42 @@
+@use "variables" as *;
+
+@mixin monthly-text($month) {
+  @if $month < 2 & $month >= 10 {
+    color: #fff;
+  } @else if $month >= 2 & $month <= 11 {
+    color: #000;
+  }
+}
+
+@mixin monthly-background($month) {
+  @if $month == 0 {
+    background-color: $primary-january;
+  } @else if $month == 1 {
+    background-color: $primary-february;
+  } @else if $month == 2 {
+    background-color: $primary-march;
+  } @else if $month == 3 {
+    background-color: $primary-april;
+  } @else if $month == 4 {
+    background-color: $primary-may;
+  } @else if $month == 5 {
+    background-color: $primary-june;
+  } @else if $month == 6 {
+    background-color: $primary-july;
+  } @else if $month == 7 {
+    background-color: $primary-august;
+  } @else if $month == 8 {
+    background-color: $primary-september;
+  } @else if $month == 9 {
+    background-color: $primary-october;
+  } @else if $month == 10 {
+    background-color: $primary-november;
+  } @else if $month == 11 {
+    background-color: $primary-december;
+  }
+}
+
+@mixin monthly-color($month) {
+  @include monthly-text($month);
+  @include monthly-background($month);
+}
