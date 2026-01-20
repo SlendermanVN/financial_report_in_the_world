@@ -1,21 +1,54 @@
-$background-color: #f5f5f5;
+// --- THEME DARK (Professional Navy) ---
+// $main-background-dark: #0f172a; // Xanh đen sâu (Deep Navy) - tạo sự uy tín
+// $sidebar-header-dark: #1e293b; // Xanh slate đậm
+// $sidebar-header-secondary-dark: #334155; // Màu phụ cho sidebar/header
+// $card-section-background-dark: #1e293b; // Tạo khối tách biệt rõ ràng
+// $primary-text-dark: #f8fafc; // Trắng xanh (độ tương phản cao để đọc số liệu)
+// $accent-color-dark: #38bdf8; // Xanh Cyan (màu nhấn hiện đại cho biểu đồ/nút)
 
-$text-primary: #000;
-$text-secondary: #333;
+/* hsl (fallback color) */
+$bg-main-dark: hsl(227 69% 2%);
+$bg-secondary-dark: hsl(221 47% 5%);
+$bg-third-dark: hsl(220 29% 10%);
+$text-dark: hsl(220 100% 98%);
+$text-muted-dark: hsl(220 27% 72%);
+$highlight-dark: hsl(220 17% 41%);
+$border-dark: hsl(220 21% 30%);
+$border-muted-dark: hsl(220 30% 20%);
+$primary-dark: hsl(220 78% 76%);
+$secondary-dark: hsl(40 53% 60%);
+$danger-dark: hsl(9 26% 64%);
+$warning-dark: hsl(52 19% 57%);
+$success-dark: hsl(146 17% 59%);
+$info-dark: hsl(217 28% 65%);
 
-$button-primary-hover: #383838;
-$button-secondary-hover: #f2f2f2;
-$button-secondary-border: #ebebeb;
+// --- THEME LIGHT (Clean Enterprise) ---
+// $main-background-light: #f1f5f9; // Xám xanh rất nhạt (giảm mỏi mắt hơn trắng tinh)
+// $sidebar-header-light: #0f172a; // Sidebar tối giúp tập trung vào nội dung chính
+// $sidebar-header-secondary-light: #192746; // Màu phụ cho sidebar/header
+// $card-section-background-light: #ffffff; // Card trắng sạch sẽ cho báo cáo
+// $primary-text-light: #1e293b; // Xanh đen đậm cho văn bản và con số
+// $accent-color-light: #0284c7; // Xanh dương chuẩn tài chính
 
-$primary-january: #817;
-$primary-february: #a35;
-$primary-march: #c66;
-$primary-april: #e94;
-$primary-may: #ed0;
-$primary-june: #9d5;
-$primary-july: #4d8;
-$primary-august: #2cb;
-$primary-september: #0bc;
-$primary-october: #09c;
-$primary-november: #36b;
-$primary-december: #639;
+$bg-main-light: hsl(220 45% 91%);
+$bg-secondary-light: hsl(220 100% 96%);
+$bg-third-light: hsl(220 100% 100%);
+$text-light: hsl(224 75% 6%);
+$text-muted-light: hsl(220 21% 30%);
+$highlight-light: hsl(220 100% 100%);
+$border-light: hsl(220 15% 53%);
+$border-muted-light: hsl(220 21% 65%);
+$primary-light: hsl(221 49% 33%);
+$secondary-light: hsl(44 100% 14%);
+$danger-light: hsl(9 21% 41%);
+$warning-light: hsl(52 23% 34%);
+$success-light: hsl(147 19% 36%);
+$info-light: hsl(217 22% 41%);
+
+// --- INTERACTION & STATUS ---
+$button-primary-hover: #0369a1; // Đậm hơn một chút khi hover
+$button-secondary-hover: #e2e8f0;
+$button-secondary-border: #cbd5e1;
+
+$success-financial: #22c55e; // Màu cho chỉ số tăng trưởng (Xanh lá)
+$danger-financial: #ef4444; // Màu cho chỉ số giảm/lỗ (Đỏ)

@@ -1,34 +1,44 @@
-@use "../../../styles/mixins" as *;
-
 .header {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  @include monthly-background(1);
-  padding: 1rem 2rem;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--bg-sidebar-header);
+  padding: 0.5rem 1rem;
+  color: whitesmoke;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    height: auto; // Ensure logo scales nicely
-  }
-
-  nav ul {
+  .logoContainer {
     display: flex;
-    list-style: none;
-    gap: 1.5rem;
-    padding: 0;
-    margin: 0;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: auto;
+
+    h1 {
+      font-size: 1rem;
+    }
   }
 }
 
-.link {
-  @include monthly-text(2);
-  text-decoration: none;
-  font-weight: 500;
+.navLinks {
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 10px 0px;
+    margin: 0;
 
-  &:hover {
-    color: var(--foreground);
+    .link {
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
   }
 }

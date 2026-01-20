@@ -1,8 +1,44 @@
 @use "./variables" as *;
+@use "./mixins" as *;
+
+:root {
+  --bg-main: #{$bg-main-light};
+  --bg-secondary: #{$bg-secondary-light};
+  --bg-third: #{$bg-third-light};
+  --text-primary: #{$text-light};
+  --text-muted: #{$text-muted-light};
+  --highlight: #{$highlight-light};
+  --border: #{$border-light};
+  --border-muted: #{$border-muted-light};
+  --primary-color: #{$primary-light};
+  --secondary-color: #{$secondary-light};
+  --danger-color: #{$danger-light};
+  --warning-color: #{$warning-light};
+  --success-color: #{$success-light};
+  --info-color: #{$info-light};
+}
+
+[data-theme="dark"] {
+  --bg-main: #{$bg-main-dark};
+  --bg-secondary: #{$bg-secondary-dark};
+  --bg-third: #{$bg-third-dark};
+  --text-primary: #{$text-dark};
+  --text-muted: #{$text-muted-dark};
+  --highlight: #{$highlight-dark};
+  --border: #{$border-dark};
+  --border-muted: #{$border-muted-dark};
+  --primary-color: #{$primary-dark};
+  --secondary-color: #{$secondary-dark};
+  --danger-color: #{$danger-dark};
+  --warning-color: #{$warning-dark};
+  --success-color: #{$success-dark};
+  --info-color: #{$info-dark};
+}
 
 body {
-  background-color: $background-color;
-  color: $text-primary;
+  @include theme-style("background-color", "bg-main");
+  @include theme-style("color", "text-primary");
+  margin: 0;
   font-family: var(--font-geist-sans);
 }
 
