@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        <div>
+        <div style={{ display: "flex", flexDirection: "row" }}>
           <Sidebar />
           {children}
         </div>

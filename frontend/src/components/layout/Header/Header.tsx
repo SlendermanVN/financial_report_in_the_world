@@ -9,7 +9,9 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.logoContainer}>
         <Logo />
-        <h1>Annualy Financial Report</h1>
+        <Link className={styles.link} href="/">
+          Annual World Financial Report
+        </Link>
       </div>
       <NavLink
         listOfLinks={[

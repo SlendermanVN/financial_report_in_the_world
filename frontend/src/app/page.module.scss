@@ -1,12 +1,6 @@
-@use "../styles/mixins" as *;
-
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-
-  h1 {
-    @include theme-style("color", "text-primary");
-  }
 }

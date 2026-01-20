@@ -1,5 +1,5 @@
 import styles from "./Logo.module.scss";
-import ReportIcon from "@/public/report.svg";
+import Report_icon from "@/public/report.svg";
 
 import createStarPoints from "@/public/Star/Star";
 
@@ -36,7 +36,7 @@ const Logo = () => {
             xmlns="http://www.w3.org/2000/svg">
             <circle cx={logoSize} cy={logoSize} r={logoSize} fill="#fff" />
             <image
-              href={ReportIcon.src}
+              href={Report_icon.src}
               x={logoSize / 2}
               y={logoSize / 2}
               width={logoSize}
