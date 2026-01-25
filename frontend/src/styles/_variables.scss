@@ -8,19 +8,20 @@
 
 /* hsl (fallback color) */
 $bg-main-dark: hsl(240, 12%, 7%);
-$bg-secondary-dark: hsl(221 47% 5%);
-$bg-third-dark: hsl(220 29% 10%);
-$text-dark: hsl(220 100% 98%);
-$text-muted-dark: hsl(220 27% 72%);
-$highlight-dark: hsl(220 17% 41%);
-$border-dark: hsl(220 21% 30%);
-$border-muted-dark: hsl(220 30% 20%);
-$primary-dark: hsl(220 78% 76%);
-$secondary-dark: hsl(40 53% 60%);
-$danger-dark: hsl(9 26% 64%);
-$warning-dark: hsl(52 19% 57%);
-$success-dark: hsl(146 17% 59%);
-$info-dark: hsl(217 28% 65%);
+$bg-secondary-dark: hsl(221, 47%, 5%);
+$bg-third-dark: hsl(220, 29%, 10%);
+$text-dark: hsl(220, 100%, 98%);
+$text-muted-dark: hsl(220, 27%, 72%);
+$text-hover-dark: hsl(0, 64%, 36%);
+$highlight-dark: hsl(220, 17%, 41%);
+$border-dark: hsl(220, 21%, 30%);
+$border-muted-dark: hsl(220, 30%, 20%);
+$primary-dark: hsl(220, 78%, 76%);
+$secondary-dark: hsl(40, 53%, 60%);
+$danger-dark: hsl(9, 26%, 64%);
+$warning-dark: hsl(52, 19%, 57%);
+$success-dark: hsl(146, 17%, 59%);
+$info-dark: hsl(217, 28%, 65%);
 
 // --- THEME LIGHT (Clean Enterprise) ---
 // $main-background-light: #f1f5f9; // Xám xanh rất nhạt (giảm mỏi mắt hơn trắng tinh)
@@ -30,20 +31,21 @@ $info-dark: hsl(217 28% 65%);
 // $primary-text-light: #1e293b; // Xanh đen đậm cho văn bản và con số
 // $accent-color-light: #0284c7; // Xanh dương chuẩn tài chính
 
-$bg-main-light: hsl(220 45% 91%);
+$bg-main-light: hsl(220, 45%, 91%);
 $bg-secondary-light: hsl(222, 55%, 65%);
-$bg-third-light: hsl(220 100% 100%);
-$text-light: hsl(224 75% 6%);
-$text-muted-light: hsl(220 21% 30%);
-$highlight-light: hsl(220 100% 100%);
-$border-light: hsl(220 15% 53%);
-$border-muted-light: hsl(220 21% 65%);
-$primary-light: hsl(221 49% 33%);
-$secondary-light: hsl(44 100% 14%);
-$danger-light: hsl(9 21% 41%);
-$warning-light: hsl(52 23% 34%);
-$success-light: hsl(147 19% 36%);
-$info-light: hsl(217 22% 41%);
+$bg-third-light: hsl(220, 100%, 100%);
+$text-light: hsl(224, 75%, 6%);
+$text-muted-light: hsl(220, 21%, 30%);
+$text-hover-light: hsl(220, 64%, 36%);
+$highlight-light: hsl(220, 100%, 100%);
+$border-light: hsl(220, 15%, 53%);
+$border-muted-light: hsl(220, 21%, 65%);
+$primary-light: hsl(221, 49%, 33%);
+$secondary-light: hsl(44, 100%, 14%);
+$danger-light: hsl(9, 21%, 41%);
+$warning-light: hsl(52, 23%, 34%);
+$success-light: hsl(147, 19%, 36%);
+$info-light: hsl(217, 22%, 41%);
 
 // --- INTERACTION & STATUS ---
 $button-primary-hover: #0369a1; // Đậm hơn một chút khi hover

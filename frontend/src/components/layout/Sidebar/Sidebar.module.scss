@@ -1,0 +1,171 @@
+.sidebar {
+  width: 78px; // Kích thước gọn gàng cho Icon
+  // Chiều cao full màn hình để chiếm toàn bộ không gian dọc khi sticky
+  height: 100vh;
+  flex-shrink: 0; // Đảm bảo sidebar không bị co lại
+  background: var(--bg-main);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+
+  // === STICKY CONFIGURATION ===
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  align-self: flex-start; // QUAN TRỌNG: Giúp sidebar sticky đúng cách trong Flexbox
+
+  z-index: 1000;
+  transition:
+    width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.3s;
+  overflow: hidden; // Ẩn nội dung tràn khi thu nhỏ
+  white-space: nowrap; // Không xuống dòng chữ
+
+  // Hiệu ứng bóng đổ nhẹ giúp tách biệt sidebar
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
+
+  // === HOVER STATE: Mở rộng Sidebar ===
+  &:hover {
+    // Giảm độ rộng xuống 230px cho vừa vặn nội dung, tránh dư thừa nhiều khoảng trắng
+    width: 180px;
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.1);
+
+    // Khi Sidebar mở rộng, hiện chữ title cho tất cả .menuItem con
+    .menuItem {
+      span {
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: 0.1s; // Delay nhẹ để mượt hơn
+      }
+    }
+  }
+
+  // Container chung cho layout (thay thế ul cũ)
+  .topSection {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    // === DASHBOARD HEADER STYLE ===
+    // Chọn item đầu tiên (Dashboard) để style riêng
+    > .menuItem:first-child {
+      cursor: default; // Không dạng click
+      padding: 20px;
+      background-color: lightskyblue;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); // Đường phân cách
+      border-left: 3px solid transparent; // Reset border
+
+      // Style chữ Dashboard nhấn mạnh
+      span {
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--accent-color);
+        font-size: 0.8rem;
+      }
+
+      // Icon Dashboard luôn sáng
+      svg,
+      i,
+      .icon {
+        color: var(--accent-color);
+      }
+
+      // Vô hiệu hóa hover effect của menuItem thường
+      &:hover {
+        border-left-color: transparent;
+
+        span {
+          color: var(--accent-color);
+        }
+        svg,
+        i,
+        .icon {
+          color: var(--accent-color);
+          transform: none; // Không phóng to
+        }
+      }
+    }
+  }
+
+  .bottomSection {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  // Fix: Xóa gạch chân mặc định của thẻ Link (a tag)
+  a {
+    text-decoration: none;
+  }
+
+  .menuItem {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px; // Padding cân đối
+    color: var(--text-primary);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent; // Line highlight ẩn
+
+    // Icon container: Cố định kích thước để không bị nhảy
+    svg,
+    i,
+    .icon {
+      flex-shrink: 0; // Không bị co lại
+      width: 24px;
+      height: 24px;
+      font-size: 1.4rem;
+      margin-right: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.7); // Màu icon hơi mờ
+      transition: color 0.3s;
+    }
+
+    // Text Title
+    span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      opacity: 0; // Ẩn mặc định
+      transform: translateX(-10px); // Hiệu ứng trượt nhẹ
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    // === ITEM HOVER EFFECT & ACTIVE STATE ===
+    .menuItem.active,
+    .menuItem:hover {
+      background: hsl(220, 62%, 83%); // Màu nền khi hover / active
+      border-left-color: var(--accent-color); // Hiện line màu bên trái
+
+      svg,
+      i,
+      .icon {
+        color: var(--accent-color); // Icon sáng lên
+        transform: scale(1.1); // Phóng to nhẹ icon
+      }
+
+      span {
+        color: var(--text-hover); // Chữ sáng lên
+      }
+    }
+
+    .menuItem {
+      display: flex;
+      align-items: center;
+      padding: 12px 24px; // Padding cân đối
+      color: var(--text-primary);
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent; // Line highlight ẩn
+    }
+  }
+}

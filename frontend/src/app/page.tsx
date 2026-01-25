@@ -1,9 +1,13 @@
 import styles from "./page.module.scss";
 
+import Hero from "./_components/Hero/Hero";
+import Overview from "./_components/Overview/Overview";
+
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <h1>Financial Report in the World</h1>
-    </div>
+    <main className={styles.main}>
+      <Hero />
+      <Overview />
+    </main>
   );
 }

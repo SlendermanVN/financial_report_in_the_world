@@ -7,6 +7,7 @@
   --bg-third: #{$bg-third-light};
   --text-primary: #{$text-light};
   --text-muted: #{$text-muted-light};
+  --text-hover: #{$text-hover-light};
   --highlight: #{$highlight-light};
   --border: #{$border-light};
   --border-muted: #{$border-muted-light};
@@ -24,6 +25,7 @@
   --bg-third: #{$bg-third-dark};
   --text-primary: #{$text-dark};
   --text-muted: #{$text-muted-dark};
+  --text-hover: #{$text-hover-dark};
   --highlight: #{$highlight-dark};
   --border: #{$border-dark};
   --border-muted: #{$border-muted-dark};
@@ -35,8 +37,12 @@
   --info-color: #{$info-dark};
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @include theme-style("background-color", "bg-main");
+  @include theme-style("background-color", "bg-third");
   @include theme-style("color", "text-primary");
   margin: 0;
   font-family: var(--font-geist-sans);

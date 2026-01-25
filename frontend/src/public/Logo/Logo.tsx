@@ -1,5 +1,5 @@
 import styles from "./Logo.module.scss";
-import Report_icon from "@/public/report.svg";
+import Icon_report from "@/public/report-svgrepo-com.svg";
 
 import createStarPoints from "@/public/Star/Star";
 
@@ -13,7 +13,14 @@ const Logo = () => {
           <svg
             viewBox={`0 0 ${logoSize * 2} ${logoSize * 2}`}
             xmlns="http://www.w3.org/2000/svg">
-            <circle cx={logoSize} cy={logoSize} r={logoSize} fill="#fff" />
+            <circle
+              cx={logoSize}
+              cy={logoSize}
+              r={logoSize - 2}
+              fill="#008B8B"
+              stroke="#005757"
+              strokeWidth={2}
+            />
             <circle
               cx={logoSize}
               cy={logoSize}
@@ -34,9 +41,16 @@ const Logo = () => {
           <svg
             viewBox={`0 0 ${logoSize * 2} ${logoSize * 2}`}
             xmlns="http://www.w3.org/2000/svg">
-            <circle cx={logoSize} cy={logoSize} r={logoSize} fill="#fff" />
+            <circle
+              cx={logoSize}
+              cy={logoSize}
+              r={logoSize - 2}
+              fill="#008B8B"
+              stroke="#005757"
+              strokeWidth={2}
+            />
             <image
-              href={Report_icon.src}
+              href={Icon_report.src}
               x={logoSize / 2}
               y={logoSize / 2}
               width={logoSize}
